@@ -10,11 +10,24 @@ The first thing you want to do is to fork this repo (or download the files), int
 
 ### Create a facebook app
 Next, you will want to create a facebook app [Here](https://developers.facebook.com/), and then Go to your app settings and, under Product Settings, click "Add Product." Select "Messenger."
+
 ![Add Product](https://scontent-lhr3-1.xx.fbcdn.net/t39.2178-6/12995587_195576307494663_824949235_n.png)
 
 ### Setup Webhook
 Under the "PRODUCT SETTINGS" section, click on the "Messenger" product you just added, find the Webhooks section and click Setup Webhooks. Enter a URL for a webhook (ie. https://app.herokuapp.com/webhook) in this app the webhook url is /webhook, enter a Verify Token (for this app its 'verifytune') and select message_deliveries, messages, messaging_optins, and messaging_postbacks under Subscription Fields.
+
 ![Webhook](https://scontent-lhr3-1.xx.fbcdn.net/t39.2178-6/12057143_211110782612505_894181129_n.png)
+
+### Get Page Access Token
+In the Token Generation section, select your Page. A Page Access Token will be generated for you. Copy this Page Access Token, and go to your node dashboard and then settings. there should be a button to show config vars, click it and create a variable "PAGE_ACCESS_TOKEN" and in that field put the page token we generated a minute ago.
+
+![Heroku Varibles](http://s32.postimg.org/d43qqlmv9/Heroku_Config.png)
+
+### Subscribe app to the page
+Now you want to go to your teminal in the directory where you put this apps files, and enter the command `curl -ik -X POST "https://graph.facebook.com/v2.6/me/subscribed_apps?access_token=<token>"`, replaceing `<token>` with the token we got a minute ago for the facebook page.
+
+### Deploy
+Now Deply to Heroku or whatever platform you are using!
 
 ## Contributing
 1. Fork it!
