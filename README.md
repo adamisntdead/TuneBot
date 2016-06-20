@@ -1,6 +1,7 @@
 # TuneBot (Facebook Messenger Bot)
 
 [![Join the chat at https://gitter.im/adamisntdead/TuneBot](https://badges.gitter.im/adamisntdead/TuneBot.svg)](https://gitter.im/adamisntdead/TuneBot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A Facebook Messenger bot that takes the name of an Irish music tune, and gives suggestions as to what you could play with it. Powered by the [TheSession.org](https://thesession.org/)
 
 ## Usage
